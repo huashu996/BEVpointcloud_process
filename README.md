@@ -1,23 +1,20 @@
 # BEVpointcloud_process
 
 ROS package for ground filter and cluster focus on the BEV pointcloud
-
+该算法包含了点云下采样、点云变换、地面分割、聚类、跟踪
 ## 安装
  - 建立工作空间并拷贝这个库
    ```Shell
-   mkdir -p BEVpointcloud_process/src
-   cd BEVpointcloud_process/src
-   git@github.com:huashu996/BEVpointcloud_process.git
+   mkdir -p BEV_pointcloud_cluster_tracker/src
+   cd BEV_pointcloud_cluster_tracker/src
+   git@github.com:huashu996/BEV_pointcloud_cluster_tracker.git
    cd ..
    catkin_make
    ```
 ## 运行
- - 启动`ground_filter`
+ - 启动
    ```Shell
-   roslaunch plane_ground_filter plane_ground_filter.launch
+   roslaunch lidar_obstacle_detector mai_city.launch
    ```
- - 启动`cluster`
-   ```Shell
-   roslaunch points_cluster points_cluster.launch
-   ```
-
+## 参数修改
+	./cfg obstacle_detector.cfg
